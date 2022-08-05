@@ -4,9 +4,9 @@ module.exports = async function (context, req) {
 
     context.log('JavaScript HTTP trigger function processed a request.');
 
-    const ENDPOINT = "https://api.edamam.com/api/recipes/v2"//process.env.RECIPE_API_ENDPOINT;
-    const KEY = "359341c39d1f576448efec83ea438bf8"//process.env.RECIPE_API_APP_KEY;
-    const APP_ID = "7e6e923f"//process.env.RECIPE_API_APP_ID;
+    const ENDPOINT = process.env.RECIPE_API_ENDPOINT;
+    const KEY = process.env.RECIPE_API_APP_KEY;
+    const APP_ID = process.env.RECIPE_API_APP_ID;
 
     const query = req.headers['query'];
     const cuisineType = req.headers['cuisinetype'];
